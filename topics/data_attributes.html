@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Exam Notes</title>
+    <link rel="stylesheet" href="../assets/css/prism.css">
+    <link rel="stylesheet" type="text/css" href="../assets/css/style.css">
+    <script src="../assets/js/prism.js"></script>
+    <!-- <script src="../assets/js/display.js"></script> -->
+</head>
+
+<body>
+    <h3>Data Attributes</h3>
+    <p class="note info">Data attributes provide us with a way to store data linked to an HTML element.
+Usually, this entails additional meta data we will need at a later time (after an event
+has been invoked)</p>
+        
+    <h3>Setting data attributes in HTML</h3>
+    <pre><code class="language-html">
+        &ltarticle data-semester="S2"&gt&lt/article&gt
+    </code></pre>
+    <h3>Accessing data attributes in JavaScript</h3>
+    <pre><code class="language-js">
+        document.querySelector('article').dataset.semester;
+        document.querySelector('article').getAttribute('data-semester');
+    </code></pre>
+
+    <p class="go-back" ><a href="../index.html">Go back</a></p>
+</body>
+
+</html>

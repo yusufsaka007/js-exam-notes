@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Exam Notes</title>
+    <link rel="stylesheet" href="../assets/css/prism.css">
+    <link rel="stylesheet" type="text/css" href="../assets/css/style.css">
+    <script src="../assets/js/prism.js"></script>
+    <!-- <script src="../assets/js/display.js"></script> -->
+</head>
+
+<body>
+    <h3 class="note info">Named Function</h3>
+    <pre><code class="language-js">
+        document.querySelector('button').addEventListener('click',showMessage);
+        function showMessage(e){
+            console.log('Ooh that tickles!');
+        }
+    </code></pre>
+    <h3 class="note info">Anonymous Function</h3>
+    <pre><code class="language-js">
+        document.querySelector('button').addEventListener('click', function (e){
+            console.log('Ooh that tickles!');
+        });
+    </code></pre>
+    <h3 class="note info">Arrow Function</h3>
+    <pre><code class="language-js">
+        document.querySelector('button').addEventListener('click', (e) => console.log('Ooh that tickles!'));
+    </code></pre>
+    <p class="go-back"><a href="../index.html">Go back</a></p>
+</body>
+
+</html>

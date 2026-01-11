@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Exam Notes</title>
+    <link rel="stylesheet" href="../assets/css/prism.css">
+    <link rel="stylesheet" type="text/css" href="../assets/css/style.css">
+    <script src="../assets/js/prism.js"></script>
+    <script src="../assets/js/display.js"></script>
+    <script src="../assets/js/script4.js"></script>
+</head>
+
+<body>
+    <h3 class="note info">The event object</h3>
+    <p>Every event handler automatically gains an event object, which holds valuable information about the event such as
+        its parent(s), X, Y values on the screen and so on</p>
+
+    <h3>Prevent Default Method</h3> 
+    <pre><code class="language-js">
+        function showNumbers(e) {
+            e.preventDefault(); // Prevent the default event that would normally occur
+            // Rest of the function
+        }
+        </code></pre>
+    
+    <h3>Target Property</h3> 
+    <pre>
+        <code class="language-html">
+        &lt!-- HTML --&gt
+        &ltul&gt
+            &ltli&gtFirst Element&lt/li&gt
+            &ltli&gtSecond Element&lt/li&gt
+            &ltli&gtThird Element&lt/li&gt
+        &lt/ul&gt
+        </code>
+    </pre>
+    <pre>
+        <code class="language-js">
+        // JavaScript
+        document.addEventListener('DOMContentLoaded',init);
+        function init(){
+            let lis = document.querySelectorAll('li');
+            lis.forEach((li) => {
+            li.addEventListener('click',showWhichOneWasClicked);
+        });
+
+        }
+        function showWhichOneWasClicked(e){
+            console.log(e.target);
+        }
+        </code>
+    </pre>
+
+    <h4>Wish list. Click one of the following items</h4>
+    <ul>
+        <li class="one wish">First element</li>
+        <li class="two wish">Second element</li>
+        <li class="three wish">Third element</li>
+        <li class="four wish">Fourth element</li>
+        <li class="five wish">Fifth element</li>
+    </ul>
+    <p>Clicked Item: </p><p id="clicked-item"></p>
+
+    <p class="go-back"><a href="../index.html">Go back</a></p>
+    <details id="js-viewer">
+        <summary>View JavaScript code</summary>
+        <pre><code class="language-js"></code></pre>
+    </details>
+</body>
+
+</html>

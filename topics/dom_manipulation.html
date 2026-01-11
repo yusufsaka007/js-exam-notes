@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Exam Notes</title>
+    <link rel="stylesheet" href="../assets/css/prism.css">
+    <link rel="stylesheet" type="text/css" href="../assets/css/style.css">
+    <script src="../assets/js/prism.js"></script>
+    <script src="../assets/js/display.js"></script>
+    <script src="../assets/js/script3.js"></script>
+</head>
+
+<body>
+    <h3 class="note info">INSERTING LARGE CHUNKS OF HTML</h3>
+    <div>
+        <section>
+
+        </section>
+        <button type="button">Insert HTML</button>
+        <button type="button">Remove HTML</button>
+    </div>
+
+    <h3 class="note info">If you want to have more control over where to add the html</h3>
+    <pre><code class="language-js">
+            // Use
+            insertAdjacentHTML(&ltPOSITION&gt, html);
+        </code></pre>
+    <pre><code class="language-html">
+            &lt;!-- beforebegin --&gt;
+            &lt;p&gt;
+            &lt;!-- afterbegin --&gt;
+            foo
+            &lt;!-- beforeend --&gt;
+            &lt;/p&gt;
+            &lt;!-- afterend --&gt;
+        </code></pre>
+
+    <h3 class="note info">Get and Set attributes</h3>
+    <pre><code class="language-js">
+            document.querySelector('a').getAttribute('href');
+            document.querySelector('a').setAttribute('href', 'index.html');
+        </code></pre>
+
+    <h3 class="note info">Iterating</h3>
+    <pre><code class="language-js">
+            // Use forEach
+            const mutantPowers = ['Keen eye-sight',
+            'Regeneration',
+            'Levitation',
+            'Lazer eyes'];
+            mutantArray.forEach(showMutantPowers);
+            function showMutantPowers(power){
+            console.log(power);}
+
+            // Or use for of
+            const numbers = [10, 20, 30];
+            for (const value of numbers) {
+            console.log(value);
+            }
+        </code></pre>
+        <p>Test using the following buttons (Open console)</p>
+        <button id="test-for-each">forEach</button>
+        <button id="test-for-of">for of</button>
+
+
+    <p class="go-back"><a href="../index.html">Go back</a></p>
+    <details id="js-viewer">
+        <summary>View JavaScript code</summary>
+        <pre><code class="language-js"></code></pre>
+    </details>
+</body>
+
+</html>
