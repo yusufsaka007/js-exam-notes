@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Exam Notes</title>
+    <link rel="stylesheet" href="../assets/css/prism.css">
+    <link rel="stylesheet" type="text/css" href="../assets/css/style.css">
+    <script src="../assets/js/prism.js"></script>
+    <script src="../assets/js/display.js"></script>
+    <script src="../assets/js/script5.js"></script>
+
+    <style>
+        div {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 200px;
+            width: 50%;
+            gap: 10px;
+            margin: 2rem 10rem;
+        }
+
+        div h4 {
+            margin: 0;
+        }
+        #container1 {
+            border: 3px solid green;
+        }
+        #container2 {
+            border: 3px solid red;
+        }
+        #container3 {
+            border: 3px solid blue;
+        }
+    </style>
+</head>
+
+<body>
+    <h3>Event Bubbling</h3>
+    <p class="note warning">The default behaviour of event is that it bubbles outwards, all the way to the top if the
+        DOM tree</p>
+    <p class="note info">It will trigger the same events on all of its parents</p>
+    <div id="container1">
+        <h4>Stoppropagation demo</h4>
+        <button id="container-btn1">No stoppropagation()</button>
+        <button id="container-btn2">With stoppropagation()</button>
+    </div>
+    <p class="note info">To stop the event bubbling of the elements from the same type, as well as the parent ones use:</p>
+    <pre><code class="language-js">
+        e.stopImmediatePropagation();
+        </code></pre>
+
+    <h3>Event Capturing</h3>
+    <p class="note info">Set the third argument of <code class="language-js">addEventListener</code> to true and the order will be reversed</p>
+    <div id="container2">
+        <h4>Event capturing demo</h4>
+        <p>Click this link: <a href="#">Click Me</a></p>
+    </div>
+
+
+    <h3>currentTarget</h3>
+    <p class="note info">What if you want to know which child triggered the event</p>
+    <div id="container3">
+        <h4>Click one of the list items</h4>
+        <ul>
+           <li>Element1</li> 
+           <li>Element2</li> 
+           <li>Element3</li> 
+           <li>Element4</li> 
+        </ul>
+        
+    </div>
+    <p class="go-back"><a href="../index.html">Go back</a></p>
+    <details id="js-viewer">
+        <summary>View JavaScript code</summary>
+        <pre><code class="language-js"></code></pre>
+    </details>
+</body>
+
+</html>
